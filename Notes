@@ -61,8 +61,18 @@ add Maven surefire and Maven compiler plugin in pom.xml
   </build>
  
  Then run as Maven Test
- 
- 9 Run on Jenkins
+
+9 Git 
+git init ----> C:\Users\Omkar\OneDrive\Desktop\RestAssuredApi (Local Repository) git bash cmd
+git config --global user.name ""
+git config --global user.email ""
+git add .
+git commit -m ""
+git remote add origin "https://github.com/SonalDShinde/RestAssuredPractice.git" --------> adding local repository to global 
+git push 
+
+
+10 Run on Jenkins
  
  
  
