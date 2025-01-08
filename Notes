@@ -73,6 +73,13 @@ git push
 
 
 10 Run on Jenkins
+run jenkins.war file ---------> java -jar jenkins.war
+open jenkins https://localhost:8080
+go to ------> Manage Jenkins ------> Tools ------> check JDK,GIT,Maven Installation
+Click on New item -----> Maven Project -----> Source Code Management --select git option -----> give Repository URL
+Go to Build ----> Root POM (pom.xml) ------> Goals and options (clean test)
+
+
  
  
  
