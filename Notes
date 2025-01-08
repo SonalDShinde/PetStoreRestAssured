@@ -1,0 +1,72 @@
+1 First create 
+****Payload**** == where we are having request body 
+i.e POJO class 
+
+2 then create ***Routes***
+where we having base url and endpoints for curd operations for different different api's like USER,PET,STORE etc
+In EndPoints classes we create a CRUD operations like createUser(), updateUser(), getUser(), deleteUser()
+here we not mention any validation 
+
+3 Create a ****test**** classes 
+first create setupData() to generate random data by using Faker library
+here we created tests as per requirement like public void createuserTest()
+and call userEndPoint methods like createUser() and all 
+and here we can validate our response and other responses also 
+we can use assertion for validation
+
+4 Create Data Driven Testing
+need excel data file (user.xlsx)
+require excel utility file (XLUtility)
+create DataProvider class
+Create DataDrivenTestCase (UserDataDrivenTest)
+
+5 Generate Extend Reports
+Add extent report dependency in pom.xml
+Create ExtendReport Utility class (ExtentReportManager.java ----> where we implemented ITestlistener Interface)
+create testng.xml
+
+6 Generate Logs 
+Add Log4j2 dependency in pom.xml
+
+7 Use Properties file for endpoints
+Create Properties file to store URL's -----> routes.properties
+Create endpoint class to fetch the properties file using ResourseBundle class object ------> UserEndPointPropertiesFile
+then do changes into test file ------> UserTestProperties
+
+8 Run the test script using Maven 
+add Maven surefire and Maven compiler plugin in pom.xml
+
+ <build>
+  <pluginManagement>
+  <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-report-plugin</artifactId>
+        <version>3.5.2</version>
+      </plugin>
+      
+      <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>3.13.0</version>
+          <configuration>    ------------------------------> under configuration tag add suit tag and give suit name for maven test run
+				<suit>
+				testng.xml
+				</suit>	
+          </configuration>
+        </plugin>
+      
+    </plugins>
+  </pluginManagement>
+  </build>
+ 
+ Then run as Maven Test
+ 
+ 9 Run on Jenkins
+ 
+ 
+ 
+  
+
+
+
